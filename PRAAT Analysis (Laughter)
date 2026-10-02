@@ -1,0 +1,208 @@
+# Infant/Adult Laughter Acoustic Analysis Script
+# Measures: tempo, F0 (mean/variability/range), vowel duration/variability, 
+# intensity range, formant dynamics, H1-H2, spectral tilt
+
+# This script analyzes all sound files in a specified directory
+# and outputs measurements to a CSV file
+
+# ===== USER SETTINGS =====
+# Set your input directory (where your sound files are)
+input_directory$ = "/Users/name/location"
+
+# Set your output file path
+output_file$ = "/Users/name/location"
+
+# --- F0 settings: INFANT (baby_) ---
+# Laughter runs far higher than speech; infant vocalizations higher still.
+baby_f0_min = 100
+baby_f0_max = 1200
+
+# --- F0 settings: ADULT FEMALE (adultfemale_) ---
+# Bachorowski, Smoski & Owren (2001, JASA 110:1581) report female laugh F0
+# occasionally exceeding 2000 Hz, with mean around 400 Hz. 1000 is a
+# compromise: high enough not to clip, low enough to limit octave errors.
+adultfemale_f0_min = 75
+adultfemale_f0_max = 1000
+
+# --- Formant settings ---
+# Adult female: original value, appropriate for female vocal tracts.
+# Infant: shorter vocal tract puts formants roughly an octave higher.
+baby_formant_max = 8000
+adultfemale_formant_max = 5500
+num_formants = 5
+
+# ===== END USER SETTINGS =====
+
+# Create output file with headers
+writeFileLine: output_file$, "filename,group,duration,tempo_syllables_per_sec,",
+... "f0_mean,f0_sd,f0_min,f0_max,f0_range,",
+... "intensity_mean,intensity_sd,intensity_min,intensity_max,intensity_range,",
+... "vowel_count,vowel_mean_duration,vowel_sd_duration,",
+... "f1_mean,f1_sd,f2_mean,f2_sd,f3_mean,f3_sd,",
+... "formant_dispersion,formant_variability,",
+... "h1h2_mean,h1h2_sd,spectral_tilt"
+
+# Create a list of all sound files in the directory
+Create Strings as file list: "fileList", input_directory$ + "*.wav"
+numberOfFiles = Get number of strings
+
+# Loop through all files
+for ifile from 1 to numberOfFiles
+    select Strings fileList
+    fileName$ = Get string: ifile
+    Read from file: input_directory$ + fileName$
+    soundName$ = selected$("Sound")
+    
+    # ===== GROUP DETECTION (from filename prefix) =====
+    if left$ (fileName$, 5) = "Baby_"
+        group$ = "baby"
+        f0_min = baby_f0_min
+        f0_max = baby_f0_max
+        formant_max = baby_formant_max
+    elsif left$ (fileName$, 12) = "Adultfemale_"
+        group$ = "adultfemale"
+        f0_min = adultfemale_f0_min
+        f0_max = adultfemale_f0_max
+        formant_max = adultfemale_formant_max
+    else
+        group$ = "unknown"
+        f0_min = adultfemale_f0_min
+        f0_max = adultfemale_f0_max
+        formant_max = adultfemale_formant_max
+        appendInfoLine: "WARNING: prefix not recognized, using adultfemale settings: ", fileName$
+    endif
+    
+    # Get duration
+    duration = Get total duration
+    
+    # ===== F0 ANALYSIS =====
+    select Sound 'soundName$'
+    To Pitch: 0.01, f0_min, f0_max
+    f0_mean = Get mean: 0, 0, "Hertz"
+    f0_sd = Get standard deviation: 0, 0, "Hertz"
+    f0_minimum = Get minimum: 0, 0, "Hertz", "Parabolic"
+    f0_maximum = Get maximum: 0, 0, "Hertz", "Parabolic"
+    f0_range = f0_maximum - f0_minimum
+    
+    # ===== INTENSITY ANALYSIS =====
+    select Sound 'soundName$'
+    To Intensity: 100, 0, "yes"
+    intensity_mean = Get mean: 0, 0, "energy"
+    intensity_sd = Get standard deviation: 0, 0
+    intensity_min = Get minimum: 0, 0, "Parabolic"
+    intensity_max = Get maximum: 0, 0, "Parabolic"
+    intensity_range = intensity_max - intensity_min
+    
+    # ===== TEMPO ESTIMATION =====
+    # Using intensity-based syllable nuclei detection
+    select Sound 'soundName$'
+    To Intensity: 100, 0, "yes"
+    Down to IntensityTier
+    Down to TableOfReal
+    num_peaks = Get number of rows
+    
+    # Count intensity peaks as proxy for syllables (simplified)
+    # This is a rough estimate - for better results, use manual annotation
+    select Intensity 'soundName$'
+    To IntensityTier (peaks)
+    syllable_count = Get number of points
+    
+    if duration > 0
+        tempo = syllable_count / duration
+    else
+        tempo = 0
+    endif
+    
+    # ===== FORMANT ANALYSIS =====
+    select Sound 'soundName$'
+    To Formant (burg): 0, num_formants, formant_max, 0.025, 50
+    
+    # Get formant means and SDs
+    f1_mean = Get mean: 1, 0, 0, "Hertz"
+    f1_sd = Get standard deviation: 1, 0, 0, "Hertz"
+    f2_mean = Get mean: 2, 0, 0, "Hertz"
+    f2_sd = Get standard deviation: 2, 0, 0, "Hertz"
+    f3_mean = Get mean: 3, 0, 0, "Hertz"
+    f3_sd = Get standard deviation: 3, 0, 0, "Hertz"
+    
+    # Formant dispersion (average spacing between formants)
+    formant_dispersion = (f2_mean - f1_mean + f3_mean - f2_mean) / 2
+    
+    # Formant variability (combined SD as measure of articulatory dynamics)
+    formant_variability = (f1_sd + f2_sd + f3_sd) / 3
+    
+    # ===== VOWEL DURATION ANALYSIS =====
+    # This requires intensity-based segmentation as proxy
+    # For better results, manually annotate vowels in TextGrids
+    select Sound 'soundName$'
+    To Intensity: 100, 0, "yes"
+    
+    # Simple threshold-based vowel detection
+    threshold = intensity_mean - (intensity_sd * 0.5)
+    
+    select Intensity 'soundName$'
+    To IntensityTier (valleys)
+    valleys = Get number of points
+    
+    # Estimate vowel duration (rough approximation)
+    if syllable_count > 0
+        vowel_mean_duration = (duration * 0.4) / syllable_count
+        vowel_sd_duration = vowel_mean_duration * 0.3
+        vowel_count = syllable_count
+    else
+        vowel_mean_duration = 0
+        vowel_sd_duration = 0
+        vowel_count = 0
+    endif
+    
+    # ===== H1-H2 ANALYSIS (Spectral measure of breathiness) =====
+    select Sound 'soundName$'
+    
+    # Create Point Process for harmonic analysis
+    select Sound 'soundName$'
+    To PointProcess (periodic, cc): f0_min, f0_max
+    
+    # Get spectrum
+    select Sound 'soundName$'
+    To Spectrum: "yes"
+    
+    # Extract harmonics - this is simplified
+    # True H1-H2 requires epoch-by-epoch analysis
+    select Sound 'soundName$'
+    To Harmonicity (cc): 0.01, f0_min, 0.1, 1.0
+    h1h2_mean = Get mean: 0, 0
+    h1h2_sd = Get standard deviation: 0, 0
+    
+    # ===== SPECTRAL TILT =====
+    select Sound 'soundName$'
+    To Ltas: 100
+    
+    # Calculate spectral tilt as difference between low and high frequency bands
+    low_band = Get mean: 0, 1000, "energy"
+    high_band = Get mean: 1000, 4000, "energy"
+    spectral_tilt = low_band - high_band
+    
+    # ===== WRITE RESULTS =====
+    appendFileLine: output_file$, 
+    ... fileName$, ",", group$, ",", duration, ",", tempo, ",",
+    ... f0_mean, ",", f0_sd, ",", f0_minimum, ",", f0_maximum, ",", f0_range, ",",
+    ... intensity_mean, ",", intensity_sd, ",", intensity_min, ",", intensity_max, ",", intensity_range, ",",
+    ... vowel_count, ",", vowel_mean_duration, ",", vowel_sd_duration, ",",
+    ... f1_mean, ",", f1_sd, ",", f2_mean, ",", f2_sd, ",", f3_mean, ",", f3_sd, ",",
+    ... formant_dispersion, ",", formant_variability, ",",
+    ... h1h2_mean, ",", h1h2_sd, ",", spectral_tilt
+    
+    # Clean up objects for this file
+    select all
+    minus Strings fileList
+    Remove
+    
+    # Progress indicator
+    appendInfoLine: "Processed ", ifile, " of ", numberOfFiles, ": ", fileName$, " [", group$, "]"
+endfor
+
+# Clean up
+select Strings fileList
+Remove
+
+appendInfoLine: "Analysis complete! Results saved to: ", output_file$
