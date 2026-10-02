@@ -1,0 +1,1129 @@
+{
+    "frames": {
+        "study-intro": {
+            "blocks": [
+                {
+                    "emph": true,
+                    "text": "Important: your child does not need to be with you until the test trials begin. First, let's go over what will happen.",
+                    "title": "Listen for the babbles or giggles!"
+                },
+                {
+                    "text": "In this study:",
+                    "listblocks": [
+                        {
+                            "text": "We'll set up your webcam and record your consent to participate."
+                        },
+                        {
+                            "text": "You'll answer several questions about your child's development."
+                        },
+                        {
+                            "text": "Then, we'll make sure your audio and video is working and teach you how to hold your baby in front of the camera."
+                        },
+                        {
+                            "text": "Afterwards, your baby will hear several short audio recordings of adults and infants."
+                        }
+                    ]
+                },
+                {
+                    "text": "First, let's get your webcam set up."
+                },
+                {
+                    "text": "Please click 'Next' to proceed."
+                }
+            ],
+            "showPreviousButton": false,
+            "kind": "exp-lookit-text"
+        },
+        "video-config": {
+            "kind": "exp-video-config",
+            "troubleshootingIntro": "If you're having any trouble getting your webcam set up, please feel free to email the Infant Learning Project lab at infantlearningproject@utdallas.edu and we would be glad to help you out!"
+        },
+        "video-consent": {
+            "kind": "exp-lookit-video-consent",
+            "template": "consent_001",
+            "PIName": "Melanie J. Spence",
+            "institution": "The University of Texas at Dallas",
+            "PIContact": "Melanie J. Spence at mspence@utdallas.edu",
+            "purpose": "The purpose of this study is to better understand the types of sounds and speakers that young infants are more likely to attend to. In this study, your infant will hear different types of sounds and we will measure how long your infant looks and pays attention to them. Infants’ interest and attention to these vocalizations may help us understand how infants at different ages are developing language and social connections.",
+            "procedures": "You will register for the study and complete several short questionnaires focused on information about you and your baby. Then, the main part of the study will begin; it will last less than 5 minutes. Before we begin this part of the study, we ask that you position your chair so that your back is facing the computer screen and you will hold your baby to your chest so that your baby can see the computer screen over your shoulder. Your baby will then listen to a series of short audios. During the study, your baby will first be shown a colorful image to attract attention to the computer screen. Then your baby will be presented with a series of short audio recordings of adult and infant sounds paired with an image. Some babies will hear recordings of speech, and some babies will hear recordings of laughter. A tone will sound when the study is finished and you may turn back around to face the computer.",
+            "payment": "After you finish the study, you will have the opportunity to download a certificate of participation. To be eligible to receive this certificate, your child must be in the age range specified for this study, you must submit a valid consent statement, and we must be able to confirm that there is a child with you. However, you may download a certificate even if you don't finish the study, or if we are not able to use your child's data. There are no other direct benefits to you or your child associated with participating in this study, but we hope that you enjoy the experience. There are no anticipated risks associated with participating.",
+            "datause": "We are primarily interested in your child's eye movements in response to the video stimuli. A research assistant will watch your video to measure the amount of time your baby spends looking at the screen.",
+            "gdpr": false,
+            "research_rights_statement": "You are not waiving any legal claims, rights or remedies because of your participation in this research study. If you feel you have been treated unfairly, or you have questions regarding your rights as a research subject, you may contact the Office of Research at The University of Texas at Dallas, 972-883-4570, research@utdallas.edu.",
+            "addtional_segments": [
+                {
+                    "title": "US Patriot Act Disclosure",
+                    "text": "Lookit is a U.S. organization and all information gathered from the website is stored on servers based in the U.S. Therefore, your video recordings are subject to U.S. laws, such as the US Patriot Act. This act allows authorities access to the records of internet service providers. If you choose to participate in this study, you understand that your video recording will be stored and accessed in the USA. The security and privacy policy for Lookit can be found at the follwing link: <a href='https://lookit.mit.edu/privacy/'target='_blank'>https://lookit.mit.edu/privacy/</a>. "
+                }
+            ]
+        },
+        "questionnaire-instructions": {
+            "blocks": [
+                {
+                    "title": "Questionnaires"
+                },
+                {
+                    "text": "Now you will complete three questionnaires so we can learn a little bit more about your baby and understand whether more experience making certain sounds (like babbles or laughter) influence the sounds infants prefer to listen to. The answers to these surveys will not affect your ability to participate in the study, so please answer honestly."
+                },
+                {
+                    "text": "<strong>The Development Survey</strong> will ask you about demographic information such as what language you speak at home."
+                },
+                {
+                    "text": "<strong>The Language Survey</strong> will ask about your baby's language abilities based on their age."
+                },
+                {
+                    "text": "<strong>The Humor Survey</strong> will ask about when your babys started to laugh and what types of things they laugh at. "
+                },
+                {
+                    "text": "After the questionnaires, you will recieve instructions to prepare for the study."
+                },
+                {
+                    "text": "Please click 'Next' to proceed."
+                }
+            ],
+            "showPreviousButton": false,
+            "kind": "exp-lookit-text"
+        },
+        "development-survey": {
+            "kind": "exp-lookit-survey",
+            "formSchema": {
+                "schema": {
+                    "type": "object",
+                    "title": "Development Survey",
+                    "properties": {
+                        "language": {
+                            "type": "string",
+                            "title": "What is the primary language spoken in your child's home?",
+                            "maximum": 50,
+                            "minimum": 0,
+                            "required": true
+                        },
+                        "birth-weight": {
+                            "type": "string",
+                            "title": "What was your child's approximate birth weight?",
+                            "maximum": 50,
+                            "minimum": 0,
+                            "required": true
+                        },
+                        "screen-exposure": {
+                            "type": "radio",
+                            "title": "How often is your baby exposed to a tablet, tv or phone screen?",
+                            "enum": [
+                                "Daily",
+                                "Every other day",
+                                "2-3 times per week",
+                                "1 time per week",
+                                "Never"
+                            ],
+                            "sort": false,
+                            "required": true
+                        },
+                        "Parent-Age": {
+                            "type": "checkbox",
+                            "required": true,
+                            "title": "Please check to certify that you, the parent or guardian of the child in question, is 18 years or older.",
+                            "rightLabel": [
+                                "I am 18 years or older."
+                            ]
+                        }
+                    }
+                },
+                "options": {
+                    "fields": {
+                        "language": {
+                            "placeholder": "Language"
+                        },
+                        "birth-weight": {
+                            "placeholder": "Birth-Weight"
+                        },
+                        "screen-exposure": {
+                            "type": "radio",
+                            "optionLabels": [
+                                "Daily",
+                                "Every other day",
+                                "2-3 times per week",
+                                "1 time per week",
+                                "Never"
+                            ],
+                            "sort": false
+                        },
+                        "Parent-Age": {
+                            "type": "checkbox",
+                            "required": true,
+                            "rightLabel": [
+                                "I am 18 years or older"
+                            ]
+                        }
+                    }
+                }
+            },
+            "nextButtonText": "Next"
+        },
+        "survey-select": {
+            "kind": "exp-frame-select",
+            "frameOptions": [
+                {
+                    "kind": "exp-lookit-survey",
+                    "formSchema": {
+                        "schema": {
+                            "type": "object",
+                            "title": "Language Survey (6-8 months)",
+                            "properties": {
+                                "high-pitched-squeals": {
+                                    "type": "radio",
+                                    "title": "Does your baby make high-pitched squeals?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "deep-toned-sounds": {
+                                    "type": "radio",
+                                    "title": "When playing with sounds, does your baby make grunting, growling, or other deep-toned sounds?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "looks-toward-voice": {
+                                    "type": "radio",
+                                    "title": "If you call your baby when you are out of sight, does your baby look in the direction of your voice?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "turns-to-loud-noise": {
+                                    "type": "radio",
+                                    "title": "When a loud noise occurs, does your baby turn to see where the sound came from?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "consonant-vowel-sounds": {
+                                    "type": "radio",
+                                    "title": "Does your baby make sounds like “da,” “ga,” “ka,” and “ba”?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "repeats-copied-sounds": {
+                                    "type": "radio",
+                                    "title": "If you copy the sounds your baby makes, does your baby repeat the same sounds back to you?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "responds-to-facial-expressions": {
+                                    "type": "radio",
+                                    "title": "Does your baby respond to facial expressions?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "tracks-objects-with-eyes": {
+                                    "type": "radio",
+                                    "title": "Does your baby look at objects of interest and follow the objects with their eyes?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "reacts-to-sound-toys": {
+                                    "type": "radio",
+                                    "title": "Does your baby react to toys that make sounds, like those with bells or music?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "vocalizes-during-play": {
+                                    "type": "radio",
+                                    "title": "Does your baby vocalize during play?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "vocalizes-vowel-sounds": {
+                                    "type": "radio",
+                                    "title": "Does your baby vocalize different vowel sounds—sometimes combined with a consonant—like uuummmm, aaaagoooo, or daaaaaaa?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                }
+                            }
+                        },
+                        "options": {
+                            "fields": {
+                                "high-pitched-squeals": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "deep-toned-sounds": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "looks-toward-voice": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "turns-to-loud-noise": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "consonant-vowel-sounds": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "repeats-copied-sounds": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "responds-to-facial-expressions": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "tracks-objects-with-eyes": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "reacts-to-sound-toys": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "vocalizes-during-play": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "vocalizes-vowel-sounds": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                }
+                            }
+                        }
+                    },
+                    "nextButtonText": "Next"
+                },
+                {
+                    "kind": "exp-lookit-survey",
+                    "formSchema": {
+                        "schema": {
+                            "type": "object",
+                            "title": "Language Survey (9-11 months)",
+                            "properties": {
+                                "consonant-vowel-sounds": {
+                                    "type": "radio",
+                                    "title": "Does your baby make sounds like “da,” “ga,” “ka,” and “ba”?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "repeats-copied-sounds": {
+                                    "type": "radio",
+                                    "title": "If you copy the sounds your baby makes, does your baby repeat the same sounds back to you?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "reduplicated-babbling": {
+                                    "type": "radio",
+                                    "title": "Does your baby make two similar sounds like “ba-ba,” “da-da,” or “ga-ga”? (The sounds do not need to mean anything.)",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "plays-nursery-game-on-request": {
+                                    "type": "radio",
+                                    "title": "If you ask your baby to, do they play at least one nursery game even if you don’t show them the activity yourself (such as “bye-bye,” “Peek-a-boo,” “clap your hands,” “So Big”)?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "follows-simple-command": {
+                                    "type": "radio",
+                                    "title": "Does your baby follow one simple command, such as “Come here,” “Give it to me,” or “Put it back,” without your using gestures?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "says-three-words": {
+                                    "type": "radio",
+                                    "title": "Does your baby say three words, such as “Mama,” “Dada,” and “Baba”? (A “word” is a sound or sounds your baby says consistently to mean something or someone.)",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "reaches-for-objects": {
+                                    "type": "radio",
+                                    "title": "Does your baby reach for objects?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "points-waves-gives-objects": {
+                                    "type": "radio",
+                                    "title": "Does your baby point, wave, and show or give objects?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                },
+                                "imitates-social-gestures": {
+                                    "type": "radio",
+                                    "title": "Does your baby imitate and initiate gestures for engaging in social interactions and playing games, like blowing kisses or playing peek-a-boo?",
+                                    "enum": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false,
+                                    "required": true
+                                }
+                            }
+                        },
+                        "options": {
+                            "fields": {
+                                "consonant-vowel-sounds": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "repeats-copied-sounds": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "reduplicated-babbling": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "plays-nursery-game-on-request": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "follows-simple-command": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "says-three-words": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "reaches-for-objects": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "points-waves-gives-objects": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                },
+                                "imitates-social-gestures": {
+                                    "type": "radio",
+                                    "optionLabels": [
+                                        "Yes",
+                                        "Sometimes",
+                                        "Not yet"
+                                    ],
+                                    "sort": false
+                                }
+                            }
+                        }
+                    },
+                    "nextButtonText": "Next"
+                }
+            ],
+            "generateProperties": "function(expData, sequence, child, pastSessions, conditions) { var oneDay = 1000 * 60 * 60 * 24; var ageInDays = -1; try { ageInDays = (new Date() - child.get('birthday')) / oneDay; } catch (error) { console.error(error); } var ageInMonths = ageInDays / 30.44; var chosenFrame = 0; if (ageInMonths >= 8) { chosenFrame = 1; } else { chosenFrame = 0; } return { 'whichFrames': chosenFrame, 'ageInMonthsAtSurvey': ageInMonths }; }"
+        },
+        "laughter-survey": {
+            "kind": "exp-lookit-survey",
+            "formSchema": {
+                "schema": {
+                    "type": "object",
+                    "title": "Humor Survey",
+                    "properties": {
+                        "laughter": {
+                            "type": "radio",
+                            "title": "How often does your child laugh in the home?",
+                            "enum": [
+                                "Frequently",
+                                "Sometimes",
+                                "Almost Never",
+                                "My child does not laugh yet"
+                            ],
+                            "sort": false,
+                            "required": true
+                        },
+                        "age": {
+                            "type": "string",
+                            "title": "At what age did your child begin to laugh?",
+                            "maximum": 50,
+                            "minimum": 0,
+                            "required": true
+                        },
+                        "stimuli-type": {
+                            "type": "string",
+                            "title": "What types of things does your child laugh at?",
+                            "maximum": 50,
+                            "minimum": 0,
+                            "required": true
+                        }
+                    }
+                },
+                "options": {
+                    "fields": {
+                        "laughter": {
+                            "type": "radio",
+                            "optionLabels": [
+                                "Frequently",
+                                "Sometimes",
+                                "Almost Never",
+                                "My child does not laugh yet"
+                            ],
+                            "sort": false
+                        },
+                        "age": {
+                            "placeholder": "Age"
+                        },
+                        "stimuli-type": {
+                            "placeholder": "Cause of Laughter"
+                        }
+                    }
+                }
+            },
+            "nextButtonText": "Moving on..."
+        },
+        "stimuli-preview": {
+            "kind": "exp-lookit-stimuli-preview",
+            "doRecording": false,
+            "skipButtonText": "Skip preview",
+            "previewButtonText": "I'd like to preview the stimuli",
+            "blocks": [
+                {
+                    "emph": true,
+                    "title": "Stimuli Preview"
+                },
+                {
+                    "emph": true,
+                    "text": "If you'd like to see an example of the audios your child will be shown, you can take a look ahead of time now."
+                },
+                {
+                    "text": "It is important that you preview these audios without your child, so that the audios will still be new to them. If your baby is in the room with you, please use headphones so the baby cannot hear the audio. Remember to take off the headphones once you are done previewing the stimuli."
+                }
+            ],
+            "showPreviousButton": true,
+            "baseDir": "https://raw.githubusercontent.com/infantlearningproject/Infant-Preference-for-Sounds/master/",
+            "videoTypes": [
+                "mp4",
+                "webm"
+            ],
+            "audioTypes": [
+                "mp3"
+            ],
+            "stimuli": [
+                {
+                    "caption": "During the study, we will play recordings of adults and infants making sounds. Some babies will hear speech sounds and some babies will hear laughter. This is an example of what your baby might hear.",
+                    "audio": "Baby_neutral04"
+                },
+                {
+                    "emph": true,
+                    "caption": "When you hear this audio, the study will be over and you are free to turn back around.",
+                    "audio": "all_done"
+                }
+            ]
+        },
+        "instructions": {
+            "kind": "exp-lookit-instructions",
+            "blocks": [
+                {
+                    "title": "Study Overview",
+                    "listblocks": [
+                        {
+                            "text": "Your baby will hear 12 10-second recordings. Half of the babies in this study will be listening to recordings of speech sounds, and half of the babies will be listening to recordings of laughter. Which videos your baby will be viewing is determined at random. We want to see how the babies react!"
+                        },
+                        {
+                            "text": "The audios in the study are quite repetitive and short so they might start to sound strange to your adult ears! We are trying to learn about the very small building blocks of language and how your baby reacts to them."
+                        },
+                        {
+                            "text": "You will also hear a chime noise multiple times during the study. This accompanies a video of a small colorful ball in the center of the screen. The purpose for this extra video is to keep your child's attention throughout the study. There will be a chime sound at the beginning and the end of the test trials."
+                        },
+                        {
+                            "text": "The trials will take about 3 minutes to complete. After that, you will be able to select a level of privacy for your data."
+                        },
+                        {
+                            "text": "Let's make sure your audio and video are working, then teach you how to hold your baby in front of the camera before we begin the study."
+                        }
+                    ]
+                },
+                {
+                    "text": "Please click the play button below to make sure you can hear the audio!",
+                    "title": "Audio Test",
+                    "mediaBlock": {
+                        "text": "You should hear 'Ready to go?'",
+                        "isVideo": false,
+                        "sources": [
+                            {
+                                "src": "https://s3.amazonaws.com/lookitcontents/exp-physics-final/audio/ready.mp3",
+                                "type": "audio/mp3"
+                            },
+                            {
+                                "src": "https://s3.amazonaws.com/lookitcontents/exp-physics-final/audio/ready.ogg",
+                                "type": "audio/ogg"
+                            }
+                        ],
+                        "mustPlay": true,
+                        "warningText": "Please try playing the sample audio."
+                    }
+                },
+                {
+                    "text": "Please play the video below to check that it is working correctly.",
+                    "title": "Video Test",
+                    "mediaBlock": {
+                        "isVideo": true,
+                        "sources": [
+                            {
+                                "src": "https://s3.amazonaws.com/lookitcontents/exp-physics-final/examples/7_control_same.mp4",
+                                "type": "video/mp4"
+                            },
+                            {
+                                "src": "https://s3.amazonaws.com/lookitcontents/exp-physics-final/examples/7_control_same.webm",
+                                "type": "video/webm"
+                            }
+                        ],
+                        "mustPlay": true,
+                        "warningText": "Please try playing the sample video."
+                    }
+                }
+            ],
+            "showWebcam": false,
+            "nextButtonText": "Next"
+        },
+        "video-quality": {
+            "kind": "exp-video-config-quality",
+            "title": "Webcam setup for preferential looking",
+            "introText": "We'll be analyzing where your child chooses to look during the videos--but only if we can tell where that is! Please check each of the following to ensure we're able to use your video:",
+            "requireItemConfirmation": true,
+            "completedItemText": "Did it!",
+            "instructionBlocks": [
+                {
+                    "text": "<strong>Make sure the webcam you're using is roughly centered</strong> relative to this monitor. This makes it much easier for us to tell whether your child is looking to the left or right!",
+                    "image": {
+                        "src": "https://s3.amazonaws.com/lookitcontents/website/centering.png",
+                        "alt": "Example images of using centered external webcam on monitor or built-in webcam on laptop."
+                    }
+                },
+                {
+                    "text": "<strong>Turn off any other monitors</strong> connected to your computer, besides the one with the centered webcam. (If there's just one monitor, you're all set!)",
+                    "image": {
+                        "src": "https://s3.amazonaws.com/lookitcontents/website/monitors.png",
+                        "alt": "Example images showing laptop screen turned off if using external monitor and webcam, or external monitor turned off if using built-in webcam and laptop screen."
+                    }
+                },
+                {
+                    "text": "Check the lighting by making sure you can <strong>clearly see your own eyes</strong> on the webcam view to the right. You may need to either turn on a light or reduce light coming from behind you.",
+                    "image": {
+                        "src": "https://s3.amazonaws.com/lookitcontents/website/lighting.png",
+                        "alt": "Example images showing good lighting, room too dark, and backlit scene where eyes are not visible."
+                    }
+                },
+                {
+                    "text": "If it's practical, <strong>minimize exciting things</strong> that are visible behind or to the side of the screen--for instance, by facing a wall instead of the kitchen. (If this isn't practical for you, don't worry about it--just check the box!)",
+                    "image": {
+                        "src": "https://s3.amazonaws.com/lookitcontents/website/distractions.png",
+                        "alt": "Example images showing a child and puppy next to the computer, versus a computer just on its own."
+                    }
+                },
+                {
+                    "text": "During the study, we'll ask that you sit facing away from the monitor, holding your child over your shoulder, like this. (More on that in a moment!) <strong>Make sure the webcam is angled up or down enough that your child's eyes are visible in this position</strong>. If you're not sure if your child's eyes will be visible, you can make a short recording to check!",
+                    "image": {
+                        "src": "https://s3.amazonaws.com/lookitcontents/website/over_shoulder.jpg",
+                        "alt": "Example image showing a dad holding his child looking over his shoulder."
+                    }
+                }
+            ],
+            "requireTestVideo": true,
+            "showRecordMenu": true,
+            "recordingInstructionText": "You should be able to see your camera view above. Please create and view a short recording to see how your setup looks."
+        },
+        "baby-webcam-check": {
+            "kind": "exp-lookit-webcam-display",
+            "showPreviousButton": true,
+            "blocks": [
+                {
+                    "title": "If you do not have your baby in the room with you yet, please make sure your baby is with you now. Please practice holding your baby like the image below!",
+                    "image": {
+                        "alt": "Father holding baby looking over his shoulder",
+                        "src": "https://raw.githubusercontent.com/Naureenamjad12/Infant-Perception-of-Humor/master/img/thumbnail_Screenshot (61) (1).png"
+                    }
+                }
+            ]
+        },
+        "final-instructions": {
+            "kind": "exp-lookit-text",
+            "showPreviousButton": false,
+            "blocks": [
+                {
+                    "emph": true,
+                    "title": "Ready to go? Let's get started!"
+                },
+                {
+                    "title": "To review, here are some things to remember during the study:",
+                    "listblocks": [
+                        {
+                            "text": "1. Please remember to hold your baby over your shoulder, like we just practiced, so that only they can see the stimuli. The portion of the study where you are required to hold your baby over the shoulder will begin immediately following this message. It is <strong>important</strong> that your baby face the screen the entire time!"
+                        },
+                        {
+                            "text": "2. Please <strong>do not</strong> direct your babies attention back to the screen should they look away or get fussy. We are interested in measuring when your baby loses interest naturally!"
+                        },
+                        {
+                            "text": "3. <strong> Do not</strong> turn around until you hear the ending audio.''All done, you can turn around now.'"
+                        },
+                        {
+                            "text": "4. You <strong>cannot</strong> pause this study. In the event that you are unable to finish, you and your baby will still receive a baby scientist certificate! The test trials following this message should take about two to three minutes to complete."
+                        },
+                        {
+                            "text": "5. Remember <strong>only you and the baby can be in the room</strong> when completing this study. Make sure <strong>no one else is in the room </strong>, whether that be another child, pet, or adult. Otherwise, the baby will become distracted."
+                        }
+                    ]
+                },
+                {
+                    "emph": true,
+                    "text": "Okay, let's start the study! Once you click next, the test trials will begin so make sure you are holding your baby correctly."
+                }
+            ]
+        },
+        "calibration-video": {
+            "kind": "exp-lookit-calibration",
+            "baseDir": "https://www.mit.edu/~kimscott/intermodal/",
+            "audioTypes": [
+                "ogg",
+                "mp3"
+            ],
+            "videoTypes": [
+                "webm",
+                "mp4"
+            ],
+            "calibrationLength": 2000,
+            "calibrationPositions": [
+                "center",
+                "left",
+                "center",
+                "right",
+                "center"
+            ],
+            "calibrationAudio": "chimes",
+            "calibrationVideo": "attentiongrabber"
+        },
+        "test-trials": {
+            "kind": "choice",
+            "sampler": "random-parameter-set",
+            "frameList": [
+                {
+                    "audio": {
+                        "source": "ODD_TRIAL_SOUNDS#UNIQ",
+                        "loop": false
+                    }
+                },
+                {
+                    "audio": {
+                        "source": "EVEN_TRIAL_SOUNDS#UNIQ",
+                        "loop": false
+                    }
+                },
+                {
+                    "audio": {
+                        "source": "ODD_TRIAL_SOUNDS#UNIQ",
+                        "loop": false
+                    }
+                },
+                {
+                    "audio": {
+                        "source": "EVEN_TRIAL_SOUNDS#UNIQ",
+                        "loop": false
+                    }
+                },
+                {
+                    "audio": {
+                        "source": "ODD_TRIAL_SOUNDS#UNIQ",
+                        "loop": false
+                    }
+                },
+                {
+                    "audio": {
+                        "source": "EVEN_TRIAL_SOUNDS#UNIQ",
+                        "loop": false
+                    }
+                },
+                {
+                    "audio": {
+                        "source": "ODD_TRIAL_SOUNDS#UNIQ",
+                        "loop": false
+                    }
+                },
+                {
+                    "audio": {
+                        "source": "EVEN_TRIAL_SOUNDS#UNIQ",
+                        "loop": false
+                    }
+                },
+                {
+                    "audio": {
+                        "source": "ODD_TRIAL_SOUNDS#UNIQ",
+                        "loop": false
+                    }
+                },
+                {
+                    "audio": {
+                        "source": "EVEN_TRIAL_SOUNDS#UNIQ",
+                        "loop": false
+                    }
+                },
+                {
+                    "audio": {
+                        "source": "ODD_TRIAL_SOUNDS#UNIQ",
+                        "loop": false
+                    }
+                },
+                {
+                    "audio": {
+                        "source": "EVEN_TRIAL_SOUNDS#UNIQ",
+                        "loop": false
+                    }
+                }
+            ],
+            "parameterSets": [
+                {
+                    "ODD_TRIAL_SOUNDS": [
+                        "Adultfemale_laugh02",
+                        "Adultfemale_laugh03",
+                        "Adultfemale_laugh04",
+                        "Adultfemale_laugh10",
+                        "Adultfemale_laugh14",
+                        "Adultfemale_laugh15"
+                    ],
+                    "EVEN_TRIAL_SOUNDS": [
+                        "Baby_laugh02",
+                        "Baby_laugh03",
+                        "Baby_laugh08",
+                        "Baby_laugh11",
+                        "Baby_laugh13",
+                        "Baby_laugh18"
+                    ]
+                },
+                {
+                    "ODD_TRIAL_SOUNDS": [
+                        "Baby_laugh02",
+                        "Baby_laugh03",
+                        "Baby_laugh08",
+                        "Baby_laugh11",
+                        "Baby_laugh13",
+                        "Baby_laugh18"
+                    ],
+                    "EVEN_TRIAL_SOUNDS": [
+                        "Adultfemale_laugh02",
+                        "Adultfemale_laugh03",
+                        "Adultfemale_laugh04",
+                        "Adultfemale_laugh10",
+                        "Adultfemale_laugh14",
+                        "Adultfemale_laugh15"
+                    ]
+                },
+                {
+                    "ODD_TRIAL_SOUNDS": [
+                        "Adultfemale_neutral01",
+                        "Adultfemale_neutral02",
+                        "Adultfemale_neutral03",
+                        "Adultfemale_neutral04",
+                        "Adultfemale_neutral05",
+                        "Adultfemale_neutral06"
+                    ],
+                    "EVEN_TRIAL_SOUNDS": [
+                        "Baby_neutral04",
+                        "Baby_neutral10",
+                        "Baby_neutral14",
+                        "Baby_neutral19",
+                        "Baby_neutral21",
+                        "Baby_neutral25"
+                    ]
+                },
+                {
+                    "ODD_TRIAL_SOUNDS": [
+                        "Baby_neutral04",
+                        "Baby_neutral10",
+                        "Baby_neutral14",
+                        "Baby_neutral19",
+                        "Baby_neutral21",
+                        "Baby_neutral25"
+                    ],
+                    "EVEN_TRIAL_SOUNDS": [
+                        "Adultfemale_neutral01",
+                        "Adultfemale_neutral02",
+                        "Adultfemale_neutral03",
+                        "Adultfemale_neutral04",
+                        "Adultfemale_neutral05",
+                        "Adultfemale_neutral06"
+                    ]
+                }
+            ],
+            "commonFrameProperties": {
+                "kind": "exp-lookit-video",
+                "baseDir": "https://raw.githubusercontent.com/infantlearningproject/Infant-Preference-for-Sounds/master/",
+                "videoTypes": [
+                    "mp4",
+                    "webm"
+                ],
+                "audioTypes": [
+                    "mp3"
+                ],
+                "video": {
+                    "top": 23,
+                    "left": 35,
+                    "width": 30,
+                    "loop": true,
+                    "source": "attention_getter"
+                },
+                "backgroundColor": "white",
+                "autoProceed": true,
+                "requiredDuration": 0,
+                "requireVideoCount": 0,
+                "requireAudioCount": 1,
+                "doRecording": true,
+                "pauseVideo": "attention_getter",
+                "waitForWebcamVideo": "attention_getter",
+                "waitForUploadImage": "attention_getter.gif"
+            }
+        },
+        "final-calibration-video": {
+            "kind": "exp-lookit-calibration",
+            "baseDir": "https://www.mit.edu/~kimscott/intermodal/",
+            "audioTypes": [
+                "ogg",
+                "mp3"
+            ],
+            "videoTypes": [
+                "webm",
+                "mp4"
+            ],
+            "calibrationLength": 2000,
+            "calibrationPositions": [
+                "center",
+                "left",
+                "center",
+                "right",
+                "center"
+            ],
+            "calibrationAudio": "chimes",
+            "calibrationVideo": "attentiongrabber"
+        },
+        "image-3": {
+            "kind": "exp-lookit-images-audio",
+            "audio": "all_done",
+            "images": [
+                {
+                    "id": "EnglishStudyEndImage",
+                    "src": "EnglishStudyEndImage.png",
+                    "position": "fill"
+                }
+            ],
+            "baseDir": "https://raw.githubusercontent.com/infantlearningproject/Infant-Preference-for-Sounds/master/",
+            "audioTypes": [
+                "mp3",
+                "ogg"
+            ],
+            "backgroundColor": "white",
+            "showPreviousButton": false,
+            "parentTextBlock": {
+                "title": "Yay! We're almost done with the study.",
+                "text": "Please hit NEXT to continue"
+            }
+        },
+        "exit-survey": {
+            "kind": "exp-lookit-exit-survey",
+            "debriefing": {
+                "text": "<strong>Purpose:</strong> You and your baby are helping us to better understand what types of sounds and speakers infants prefer to listen to, and how their preference develops from 6-10 months of age. A previously proposed theory called the Infant Talker Bias says that infants prefer listening to other infants speak. Our study hopes to find out if this bias for younger talkers expands to other social communication, such as laughter. Figuring this out can help us understand exactly what it is about infant speech that is so interesting to babies! \n\n<strong>What your baby did:</strong> In this study, your baby was shown 12 recordings. In six of the recordings, an adult was making sounds and in the other six recordings, an infant was making sounds. Half of the babies in this study were shown speech sounds and the other half were shown laughter sounds. During the videos, we were recording and analyzing how long your baby spent looking at each recording. Looking time is an indicator of the preference of the baby. If your baby spent more time looking at the recordings of infant sounds than they did looking at the recordings of adult sounds, we will be able to suggest that babies of this age have a preference for infant sounds. This suggests that there is something about infant speech that is more interesting to babies than adult speech.  These are the results we are expecting to see from this study. \n\nIt is important to note that there were no right or wrong answers in this study, we just wanted to see what your unique baby preferred! Do not worry if your baby got fussy halfway through and quit looking at the screen, we wanted to record their natural behavior. \n\n<strong>Compensation:</strong> To thank you for your participation, here is a copy of a certificate that you may download for your infant to remember how they were a research assistant before they were even one year old! Just follow the link, from which you can download and print out the certificate <a href='https://utdallas.box.com/s/0y769fprecjfz4yayq12gd0xqmohmpw8' target='_blank' rel='noopener'>here</a>. \n\n<strong>Want to learn more?</strong> Take a look at these TED Talks if you want to learn more about language and laughter development! \n<a href='https://www.ted.com/talks/sophie_scott_why_we_should_take_laughter_more_seriously' target='_blank' rel='noopener'>Why we should take laughter more seriously</a> \n<a href='https://www.ted.com/talks/patricia_kuhl_the_linguistic_genius_of_babies' target='_blank' rel='noopener'>The lingustic genius of babies</a>",
+                "title": "Thank you for participating in our study!"
+            }
+        }
+    },
+    "sequence": [
+        "study-intro",
+        "video-config",
+        "video-consent",
+        "questionnaire-instructions",
+        "development-survey",
+        "survey-select",
+        "laughter-survey",
+        "stimuli-preview",
+        "instructions",
+        "video-quality",
+        "baby-webcam-check",
+        "final-instructions",
+        "calibration-video",
+        "test-trials",
+        "final-calibration-video",
+        "image-3",
+        "exit-survey"
+    ]
+}
