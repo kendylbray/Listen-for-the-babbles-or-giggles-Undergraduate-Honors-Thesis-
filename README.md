@@ -36,21 +36,37 @@ The sequence in the protocol runs in this order:
 
 
 1	study-intro	Text	Welcomes the parent and outlines what will happen.
+
 2	video-config	Webcam setup	Helps the parent set up their webcam and microphone.
+
 3	video-consent	Video consent	Records the parent reading a consent statement (study purpose, procedures, benefits, data use, and rights).
+
 4	questionnaire-instructions	Text	Introduces the three questionnaires.
+
 5	development-survey	Survey	Asks about home language, birth weight, screen exposure, and confirms the parent is 18+.
+
 6	survey-select	Frame selector	Chooses the age-appropriate language survey (see below).
+
 7	laughter-survey	Survey	Asks how often the child laughs, when laughing began, and what makes them laugh.
+
 8	stimuli-preview	Stimuli preview	Optionally lets the parent preview an example audio (without the baby).
+
 9	instructions	Instructions	Study overview, plus an audio test and video test.
+
 10	video-quality	Webcam quality check	Checklist for webcam centering, lighting, and distractions, plus a test recording.
+
 11	baby-webcam-check	Webcam display	Shows the parent how to hold the baby over their shoulder.
+
 12	final-instructions	Text	Final reminders before test trials begin.
+
 13	calibration-video	Calibration	Attention-getter appears center, left, and right to calibrate looking direction.
+
 14	test-trials	Trials (choice frame)	The 12 audio test trials, recorded on webcam.
+
 15	final-calibration-video	Calibration	Repeats the calibration sequence.
+
 16	image-3	Images + audio	Plays the "all done" audio so the parent knows they can turn around.
+
 17	exit-survey	Exit survey	Debriefing, certificate of participation, and data privacy options.
 
 **Key logic**
