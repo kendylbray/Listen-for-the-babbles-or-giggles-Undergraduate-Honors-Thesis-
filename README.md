@@ -1,28 +1,27 @@
-Infant Preference for Sounds: Speech and Laughter
+**Listen for the babbles or giggles**
 
 An undergraduate honors thesis project that studies whether young infants prefer to listen to sounds made by other infants, and whether that preference extends from speech-like sounds (babbling) to laughter. The study is built for Children Helping Science (formerly Lookit), an online platform for running developmental research with families from home.
 
 Thesis Information
 	
-Author	Kendyl Bray
+Author:	Kendyl Bray
 
-Advisor  Melanie J. Spence, PhD
+Advisor:  Melanie J. Spence, PhD
 
 University of Texas at Dallas
 
-Year	2026
-
-Thesis Paper	Extending the Infant-Talker Bias to Naturalistic Vocalizations: Protophones and Laughter 
+Thesis Title:	Extending the Infant-Talker Bias to Naturalistic Vocalizations: Protophones and Laughter 
 
 
-Project Overview
+**Project Overview**
 Purpose
 
 This project examines how babies pay attention to different voices and sounds during their first year, while they are learning language. Past research has found that babies tend to prefer listening to speech from other infants (sometimes called the Infant Talker Bias). This project tests whether that preference also applies to another form of social communication: laughter.
 
 Understanding which voices and sounds capture an infant's attention can help explain how children learn language in the earliest months of life. Parents also complete short surveys about their child's language development and laughter, which allow us to explore whether more experience producing certain sounds (such as babbling or laughing) relates to the sounds infants prefer to hear.
 
-Study Design
+**Study Design**
+
 Participants: Infants approximately 6 to 10 months old, participating from home with a parent.
 Method: Preferential looking / looking-time paradigm. The parent sits with their back to the screen and holds the baby against their chest, over their shoulder, so the baby can see the screen but the parent cannot. The webcam records the baby's eye movements during the study.
 Conditions (between subjects): Each infant is randomly assigned to hear one of two sound types:
@@ -34,7 +33,7 @@ What the Code Does
 
 This repository contains the study protocol, a JSON file that Children Helping Science uses to build and run the study. It is not a standalone app. The JSON defines a sequence of frames (screens), and the platform handles rendering, recording, and data storage.
 
-Study flow
+**Study flow**
 
 The sequence in the protocol runs in this order:
 
@@ -56,7 +55,8 @@ The sequence in the protocol runs in this order:
 15	final-calibration-video	Calibration	Repeats the calibration sequence.
 16	image-3	Images + audio	Plays the "all done" audio so the parent knows they can turn around.
 17	exit-survey	Exit survey	Debriefing, certificate of participation, and data privacy options.
-Key logic
+
+**Key logic**
 
 Age-based language survey (survey-select). The frame uses a generateProperties function that calculates the child's age in months from their birthday on the platform. Children under 8 months receive the 6 to 8 month language survey; children 8 months and older receive the 9 to 11 month survey. The calculated age is also saved as ageInMonthsAtSurvey.
 
@@ -72,14 +72,7 @@ Each set contains six audio files per speaker type. The #UNIQ suffix on the plac
 
 Trial presentation (commonFrameProperties). Every trial shows a looping attention-getter video in the center of the screen while one audio file plays. Trials auto-advance when the audio ends, and webcam recording is on for the entire trial.
 
-Repository Contents
-.
-├── README.md
-└── [your-protocol-file].json    # Study protocol (frames + sequence)
-
-Update the file name above to match your repository. No participant data is stored in this repository.
-
-Stimuli
+**Stimuli**
 
 Audio files and the attention-getter video are hosted in a separate repository from the Infant Learning Project and loaded at runtime through baseDir:
 
@@ -87,38 +80,27 @@ https://github.com/infantlearningproject/Infant-Preference-for-Sounds
 
 File naming follows the pattern Adultfemale_laugh##, Baby_laugh##, Adultfemale_neutral##, and Baby_neutral##.
 
-How to Run the Study
+**How to Run the Study**
+
 Create or sign in to a researcher account on Children Helping Science and join or create a lab. (Lookit's researcher documentation is at lookit.readthedocs.io.)
 Create a new study in your lab.
 Under the study's Edit study details / Study type settings, open the Protocol configuration editor.
 Copy the contents of the JSON protocol file in this repository into the protocol editor and save.
 Preview the study from the researcher interface to test it, including the audio and webcam steps.
 Set the age range (approximately 6 to 10 months), submit for approval if required by your lab, and start the study.
-Requirements
+
+**Requirements**
+
 A Children Helping Science researcher account with permission to create studies
 IRB approval for your own use of the study design
 An internet connection so stimuli can load from the hosted repository
-Data and Privacy
-This repository contains no participant data.
-All data collected through the platform (survey responses, webcam video, consent video) is stored by Children Helping Science, subject to its privacy policy, and is only accessible to authorized researchers.
-The study includes a parent video consent and a data privacy selection at the end of the session.
-Anyone reusing this protocol must obtain their own ethics (IRB) approval and update the consent text, PI, institution, and contact information.
-Customizing the Protocol
 
-If you adapt this study, the most common edits are:
-
-Consent and contact info: video-consent frame (PIName, institution, PIContact, research_rights_statement)
-Support email: video-config frame (troubleshootingIntro)
-Stimuli: parameterSets in test-trials and baseDir in commonFrameProperties
-Age cutoff for the language survey: the generateProperties function in survey-select
-Debriefing text and certificate link: exit-survey frame
-Acknowledgments
 
 This study was developed in collaboration with the Infant Learning Project at The University of Texas at Dallas (PI: Melanie J. Spence).
 
 Built on the Lookit / Children Helping Science platform and its experiment-runner frames.
 
 
-Contact
+**Contact**
 
 Kendyl Bray, kendyl.bray@gmail.com
