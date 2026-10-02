@@ -5,10 +5,16 @@ An undergraduate honors thesis project that studies whether young infants prefer
 Thesis Information
 	
 Author	Kendyl Bray
+
 Advisor  Melanie J. Spence, PhD
+
 University of Texas at Dallas
+
 Year	2026
+
 Thesis Paper	Extending the Infant-Talker Bias to Naturalistic Vocalizations: Protophones and Laughter 
+
+
 Project Overview
 Purpose
 
