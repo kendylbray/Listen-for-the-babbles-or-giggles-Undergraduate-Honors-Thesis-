@@ -2,7 +2,8 @@
 
 An undergraduate honors thesis project that studies whether young infants prefer to listen to sounds made by other infants, and whether that preference extends from speech-like sounds (babbling) to laughter. The study is built for Children Helping Science (formerly Lookit), an online platform for running developmental research with families from home.
 
-Thesis Information
+
+**Thesis Information**
 	
 Author:	Kendyl Bray
 
@@ -14,7 +15,8 @@ Thesis Title:	Extending the Infant-Talker Bias to Naturalistic Vocalizations: Pr
 
 
 **Project Overview**
-Purpose
+
+**Purpose**
 
 This project examines how babies pay attention to different voices and sounds during their first year, while they are learning language. Past research has found that babies tend to prefer listening to speech from other infants (sometimes called the Infant Talker Bias). This project tests whether that preference also applies to another form of social communication: laughter.
 
