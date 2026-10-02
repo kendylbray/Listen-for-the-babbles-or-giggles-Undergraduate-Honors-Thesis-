@@ -1,17 +1,14 @@
 # Listen for the babbles or giggles 
 
 An undergraduate honors thesis project that studies whether young infants prefer to listen to sounds made by other infants, and whether that preference extends from speech-like sounds (babbling) to laughter. The study is built for Children Helping Science (formerly Lookit), an online platform for running developmental research with families from home.
-
-
-**Thesis Information**
 	
+Extending the Infant-Talker Bias to Naturalistic Vocalizations: Protophones and Laughter 
+
 Author:	Kendyl Bray
 
 Advisor:  Melanie J. Spence, PhD
 
 University of Texas at Dallas
-
-Thesis Title:	Extending the Infant-Talker Bias to Naturalistic Vocalizations: Protophones and Laughter 
 
 
 # Project Overview
