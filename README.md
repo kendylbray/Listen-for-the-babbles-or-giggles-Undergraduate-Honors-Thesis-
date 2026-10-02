@@ -1,4 +1,4 @@
-**Listen for the babbles or giggles**
+# Listen for the babbles or giggles 
 
 An undergraduate honors thesis project that studies whether young infants prefer to listen to sounds made by other infants, and whether that preference extends from speech-like sounds (babbling) to laughter. The study is built for Children Helping Science (formerly Lookit), an online platform for running developmental research with families from home.
 
@@ -14,7 +14,7 @@ University of Texas at Dallas
 Thesis Title:	Extending the Infant-Talker Bias to Naturalistic Vocalizations: Protophones and Laughter 
 
 
-**Project Overview**
+# Project Overview
 
 **Purpose**
 
@@ -39,7 +39,7 @@ This repository contains the study protocol, a JSON file that Children Helping S
 
 The sequence in the protocol runs in this order:
 
-#	Frame	Type	What it does
+
 1	study-intro	Text	Welcomes the parent and outlines what will happen.
 2	video-config	Webcam setup	Helps the parent set up their webcam and microphone.
 3	video-consent	Video consent	Records the parent reading a consent statement (study purpose, procedures, benefits, data use, and rights).
